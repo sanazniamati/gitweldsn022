@@ -7,8 +7,8 @@ function KCanvas() {
   const SCENE_BASE_HEIGHT = 500;
 
   // Max upscale
-  var SCENE_MAX_WIDTH = 1024;
-  var SCENE_MAX_HEIGHT = 768;
+  const SCENE_MAX_WIDTH = 1024;
+  const SCENE_MAX_HEIGHT = 768;
   const [size, setSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
