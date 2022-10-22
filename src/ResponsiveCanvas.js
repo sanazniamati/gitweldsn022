@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Rect, Layer, Stage } from "react-konva";
 
-function KCanvas() {
+function ResponsiveCanvas() {
   // Fixed stage size
-  const SCENE_BASE_WIDTH = 500;
-  const SCENE_BASE_HEIGHT = 500;
+  const SCENE_BASE_WIDTH = 800;
+  const SCENE_BASE_HEIGHT = 700;
 
   // Max upscale
   const SCENE_MAX_WIDTH = 1024;
-  const SCENE_MAX_HEIGHT = 768;
+  const SCENE_MAX_HEIGHT = 600;
   const [size, setSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -54,22 +54,22 @@ function KCanvas() {
       <Layer>
         <Rect x={0} y={50} width={50} height={50} fill={"green"} />
         <Rect
-          x={SCENE_BASE_WIDTH - 50}
+          x={stageSize.width - 150}
           y={50}
           width={50}
           height={50}
-          fill={"green"}
+          fill={"yellow"}
         />
         <Rect
           x={0}
-          y={SCENE_BASE_HEIGHT - 250}
+          y={stageSize.height - 350}
           width={50}
           height={50}
-          fill={"red"}
+          fill={"blue"}
         />
         <Rect
-          x={SCENE_BASE_WIDTH - 50}
-          y={SCENE_BASE_HEIGHT - 250}
+          x={stageSize.width - 150}
+          y={stageSize.height - 350}
           width={50}
           height={50}
           fill={"red"}
@@ -79,4 +79,4 @@ function KCanvas() {
   );
 }
 
-export default KCanvas;
+export default ResponsiveCanvas;

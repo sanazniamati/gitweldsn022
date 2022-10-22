@@ -1,10 +1,12 @@
-import KCanvas from "./KCanvas";
+import ResponsiveCanvas from "./ResponsiveCanvas";
 import { Card } from "react-bootstrap";
+import UnResponsiveCanvas from "./UnResponsiveCanvas";
 
 const App = () => {
   return (
     <Card.Body>
-      <KCanvas />
+      <ResponsiveCanvas />
+      <UnResponsiveCanvas />
     </Card.Body>
   );
 };
