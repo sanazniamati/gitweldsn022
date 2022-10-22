@@ -1,6 +1,11 @@
 import KCanvas from "./KCanvas";
+import { Card } from "react-bootstrap";
 
 const App = () => {
-  return <KCanvas />;
+  return (
+    <Card.Body>
+      <KCanvas />
+    </Card.Body>
+  );
 };
 export default App;
