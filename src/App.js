@@ -8,7 +8,7 @@ const App = () => {
   return (
     // <Card.Body>
     <>
-      {/*<ResponsiveCanvas />*/}
+      <ResponsiveCanvas />
       {/*<UnResponsiveCanvas />*/}
       {/*<AntonResponsiveStage />*/}
       {/*<KonvaResponsiveStage />*/}
