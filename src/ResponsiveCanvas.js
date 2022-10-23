@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Rect, Layer, Stage } from "react-konva";
+import { Rect, Layer, Stage, Circle } from "react-konva";
 
 function ResponsiveCanvas() {
   // Fixed stage size
@@ -25,11 +25,12 @@ function ResponsiveCanvas() {
     window.addEventListener("resize", checkSize);
     return () => window.removeEventListener("resize", checkSize);
   }, []);
-  const stageWidth =
-    window.innerWidth % 2 !== 0 ? window.innerWidth - 1 : window.innerWidth;
-  const stageHeight =
-    window.innerHeight % 2 !== 0 ? window.innerHeight - 1 : window.innerHeight;
-  const stageSize = { width: stageWidth, height: stageHeight };
+  // const stageWidth =
+  //   window.innerWidth % 2 !== 0 ? window.innerWidth - 1 : window.innerWidth;
+  // const stageHeight =
+  //   window.innerHeight % 2 !== 0 ? window.innerHeight - 1 : window.innerHeight;
+  // const stageSize = { width: stageWidth, height: stageHeight };
+  const stageSize = { width: size.width, height: size.height };
 
   const scaleX = Math.min(stageSize.width, SCENE_MAX_WIDTH) / SCENE_BASE_WIDTH;
 
@@ -52,7 +53,13 @@ function ResponsiveCanvas() {
       style={{ background: "lightpink" }}
     >
       <Layer>
-        <Rect x={0} y={50} width={50} height={50} fill={"green"} />
+        {/*<Circle*/}
+        {/*  x={stageSize.width / 2}*/}
+        {/*  y={stageSize.height / 2}*/}
+        {/*  fill={"red"}*/}
+        {/*  radius={100}*/}
+        {/*/>*/}
+        <Rect x={100} y={50} width={50} height={50} fill={"green"} />
         <Rect
           x={stageSize.width - 150}
           y={50}
@@ -61,7 +68,7 @@ function ResponsiveCanvas() {
           fill={"yellow"}
         />
         <Rect
-          x={0}
+          x={100}
           y={stageSize.height - 350}
           width={50}
           height={50}

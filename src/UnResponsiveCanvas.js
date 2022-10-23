@@ -1,16 +1,9 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Rect, Layer, Stage } from "react-konva";
 
 function UnResponsiveCanvas() {
-  const stageRef = useRef();
-
   return (
-    <Stage
-      ref={stageRef}
-      width={window.innerWidth}
-      height={window.innerHeight}
-      style={{ background: "lightblue" }}
-    >
+    <Stage width={500} height={250} style={{ background: "lightblue" }}>
       <Layer>
         <Rect x={0} y={50} width={50} height={50} fill={"green"} />
         <Rect
